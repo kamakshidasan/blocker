@@ -16,4 +16,4 @@ while :; do
  test "$?" -gt 128 && break
 done &
 
-#do shell script "$HOME/login.sh"
+#do shell script "$HOME/block.sh"
