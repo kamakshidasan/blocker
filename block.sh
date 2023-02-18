@@ -3,8 +3,8 @@
 kicktime=$(date +%s)
 resumetime=$(date -v+1H +%s)
 
-echo $resumetime > resume.txt
-filetime=$( tail -n 1 resume.txt )
+echo $resumetime > "$HOME/resume.txt"
+filetime=$( tail -n 1 "$HOME/resume.txt" )
 
 while :; do
  currenttime=$(date +%H:%M:%S)
@@ -18,6 +18,8 @@ while :; do
    pkill -f /System/Applications/TextEdit.app
    pkill -f /Applications/Utilities/Terminal.app
    pkill -f /System/Library/CoreServices/Finder.app
+   pkill -f /Applications/QuickTime Player.app
+   pkill -f /Applications/VLC.app
  else
    echo "$currenttime"
    break
