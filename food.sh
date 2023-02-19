@@ -1,7 +1,7 @@
 #!/bin/bash
 
 kicktime=$(date +%s)
-resumetime=$(date -v+1H +%s)
+resumetime=$(date -v+10M +%s)
 
 echo $resumetime > "$HOME/resume.txt"
 filetime=$( tail -n 1 "$HOME/resume.txt" )
@@ -16,11 +16,13 @@ while :; do
    pkill -f /Applications/Activity Monitor.app/
    pkill -f /Applications/Atom.app
    pkill -f /System/Applications/TextEdit.app
+   pkill -f /System/Applications/Launchpad.app
    pkill -f /Applications/Utilities/Terminal.app
    pkill -f /System/Library/CoreServices/Finder.app
    pkill -f /Applications/QuickTime Player.app
    pkill -f /Applications/VLC.app
    pkill -f /System/Applications/Launchpad.app
+   pkill -f /System/Applications/Preview.app
  else
    echo "$currenttime"
    break
